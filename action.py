@@ -20,7 +20,7 @@ def compare_time_zones(user_timezone: str, compare_to_timezones: str) -> str:
         user_tz = pytz.timezone(user_timezone)
         user_now = datetime.now(user_tz)
     except pytz.InvalidTimeError:
-        return f"No timezone '{user_timezone}' could not be found. Use tz database format."
+        return f"Timezone '{user_timezone}' could not be found. Use tz database format."
     
     output.append(f"- Current time in {user_timezone} is {user_now.strftime('%I:%M %p')}")
 
@@ -33,6 +33,6 @@ def compare_time_zones(user_timezone: str, compare_to_timezones: str) -> str:
 
             output.append(f"- Current time in {timezone} is {target_now.strftime('%I:%M %p')}, the difference with {user_timezone} is {time_diff} hours")
         except pytz.InvalidTimeError:
-            output.append(f"- No timezone '{timezone}' found. Use tz database format.")
+            output.append(f"- Timezone '{timezone}' could not be found. Use tz database format.")
 
     return "\n".join(output)
