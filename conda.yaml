@@ -10,10 +10,7 @@ dependencies:
   - pip=23.2.1                      # https://pip.pypa.io/en/stable/news
   - robocorp-truststore=0.8.0       # https://prefix.dev/channels/conda-forge/packages/robocorp-truststore
   - pip:
-    # TODO: Remove comments after dep. collision is fixed
     - robocorp==1.3.0               # https://pypi.org/project/robocorp
     - robocorp-browser==2.2.1       # https://pypi.org/project/robocorp-browser
     - robocorp-actions==0.0.3       # https://pypi.org/project/robocorp-actions
-
-    # You can install Action Server on the machine-level, this is only here to simplify the initial trials.
-    - robocorp-action-server==0.0.6 # https://pypi.org/project/robocorp-action-server
+    - robocorp-action-server==0.0.9 # https://pypi.org/project/robocorp-action-server
