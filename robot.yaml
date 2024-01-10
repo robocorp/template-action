@@ -3,7 +3,7 @@
 
 tasks:
   Run and Debug Action:
-    shell: python -m robocorp.actions run
+    shell: python -m robocorp.actions run --json-input devdata/input.json
 
   Start Action Server:
     shell: action-server start

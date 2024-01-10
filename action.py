@@ -35,4 +35,7 @@ def compare_time_zones(user_timezone: str, compare_to_timezones: str) -> str:
         except pytz.InvalidTimeError:
             output.append(f"- Timezone '{timezone}' could not be found. Use tz database format.")
 
+    # Pretty print for log
+    print("\n".join(output))
+    
     return "\n".join(output)
