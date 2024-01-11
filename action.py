@@ -1,6 +1,15 @@
+"""
+A simple AI Action template for comparing timezones
+
+Please checkout the base guidance on AI Actions in our main repository readme:
+https://github.com/robocorp/robocorp/blob/master/README.md
+
+"""
+
 from robocorp.actions import action
 from datetime import datetime
 import pytz
+
 
 @action
 def compare_time_zones(user_timezone: str, compare_to_timezones: str) -> str:
