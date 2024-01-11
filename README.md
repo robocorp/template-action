@@ -6,46 +6,91 @@ This template gets you started in creating Actions for [Robocorp Action Server](
 
 ## Quickstart
 
-### 1. Install Robocorp Action Server
-On macOS
+<details open>
+<summary><b>For macOS</b></summary>
+
 ```sh
+# Install Robocorp Action Server
 brew update
 brew install robocorp/tools/action-server 
-```
 
-On Windows and Linux:
-
-1. [Download the executable](https://downloads.robocorp.com/action-server/releases/index.html)
-   - Linux: `chmod a+x action-server`
-2. Add the executable in `PATH` 
-   - Windows: `setx PATH "%PATH%;%CD%"`
-   - Linux: `sudo mv action-server /usr/local/bin/`
-
-> Robocorp Action Server is also available via `pip install robocorp-action-server`
-
-### 2. Bootstrap your first Action
-
-```sh
 # Bootstrap a new project using this template.
+# You'll be prompted for the name of the project (directory):
 action-server new
 
+# Start Action Server 
+cd my-project
+action-server start --expose
+```
+</details>
+<br/>
+<details>
+<summary><b>For Windows</b></summary>
+
+```sh
+# Download Robocorp Action Server
+curl -o action-server.exe https://downloads.robocorp.com/action-server/releases/latest/windows64/action-server.exe
+
+# Add to PATH or move to a folder that is in PATH
+setx PATH=%PATH%;%CD%
+
+# Bootstrap a new project using this template.
 # You'll be prompted for the name of the project (directory):
+action-server new
 
 # Start Action Server 
 cd my-project
 action-server start --expose
 ```
 
-Once that’s done, you’ll have an Action Server UI locally (by default at [http://localhost:8080](http://localhost:8080)) and a public internet-facing URL (something like "https://twently-cuddly-dinosaurs.robocorp.link").
+</details>
+<br/>
 
-🚀 `Robocorp Action Server` is in developer preview so expect a bunch of updates in the near future both to the tooling as well as templates, examples and documentation.
+<details>
+<summary><b>For Linux</b></summary>
+
+```sh
+# Download Robocorp Action Server
+curl -o action-server https://downloads.robocorp.com/action-server/releases/latest/linux64/action-server
+chmod a+x action-server
+
+# Add to PATH or move to a folder that is in PATH
+sudo mv action-server /usr/local/bin/
+
+# Bootstrap a new project using this template.
+# You'll be prompted for the name of the project (directory):
+action-server new
+
+# Start Action Server 
+cd my-project
+action-server start --expose
+```
+
+</details>
+<br/>
+
+🚀 You should now have an Action Server running locally at: [http://localhost:8080](http://localhost:8080)) and a public internet-facing URL (something like "https://twently-cuddly-dinosaurs.robocorp.link").
+
+🚀 `Robocorp Action Server` is in developer preview, so expect many updates soon to the tooling, templates, examples and documentation.
 
 ## Dependency management
 
-Action Server uses [./conda.yaml](conda.yaml) file serving as the configuration file for managing the environment in which your actions run. It specifies the dependencies and packages required, ensuring that each run happens in a clean and repeatable environment.
+Action Server uses [conda.yaml](conda.yaml) file serving as the configuration file for managing the environment in which your actions run. It specifies the dependencies and packages required, ensuring that each run happens in a clean and repeatable environment.
 
-> Q: "Why not just `pip install...`?"<br/>
-> A: As you'll probably not run the Action on your machine forever, you will need to control your Python dependencies and the Python version itself. Using the [conda.yaml](conda.yaml) allows you to get everything repeatable and nicely isolated without hassle.
+🙋‍♂️ "Why not just `pip install...`?"<br/>
+👉 You'll probably not run the Actions just on your machine forever
+<details>
+<summary>Want to know more...</summary>
+
+* You do not need to manage Python installations on the target machines
+* You can avoid `Works on my machine`
+* You can control exactly which version of Python your automation will run on 
+  * ..as well as the pip version to avoid dep. resolution changes
+* No need for venv, pyenv, ... tooling and knowledge sharing inside your team.
+* Define dependencies in conda.yaml let our tooling do the heavy lifting.
+* You get all the content of [conda-forge](https://prefix.dev/channels/conda-forge) without any extra tooling
+
+</details><br/>
 
 To add a new dependency, simply add them to the pip section of the [conda.yaml](conda.yaml) dependencies:
 
@@ -81,7 +126,7 @@ The template is a simple starting point to show how to get started.
 
 The action enables you to get the timezone differences between locations.
 
-We use [pytz](https://pypi.org/project/pytz/) as an example to show that you can leverage the whole Python ecosystem. Robocorp provides [a bunch of libraries](https://pypi.org/search/?q=robocorp-); you can make your own. The sky is the limit.
+We use [pytz](https://pypi.org/project/pytz/) as an example to show that you can leverage the whole Python ecosystem. Robocorp provides a [bunch of libraries](https://pypi.org/search/?q=robocorp-); you can make your own. The sky is the limit.
 
 🚀 Now, go get'em
 
