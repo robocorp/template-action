@@ -9,6 +9,6 @@ dependencies:
   - pip=23.2.1
   - robocorp-truststore=0.8.0
   - pip:
-      - robocorp==1.4.3
+      - robocorp==1.6.1
       - robocorp-actions==0.0.7
       - pytz==2023.3
