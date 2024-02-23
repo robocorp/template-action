@@ -11,10 +11,9 @@ This template gets you started in creating Actions for [Robocorp Action Server](
 
 ## Dependency management
 
-We recommend placing your dependencies in [conda.yaml](conda.yaml).
+Dependencies need to be added to [`package.yaml`](package.yaml).
 
-👉 More on [managing your dependencies](https://github.com/robocorp/robocorp?tab=readme-ov-file#what-makes-a-python-function-an-%EF%B8%8Faction) in the main repository.
-
+👉 [package.yaml documentation](https://github.com/robocorp/robocorp/blob/master/action_server/docs/guides/01-package-yaml.md) in the main repository.
 
 ## Actions in VS Code 
 
@@ -24,7 +23,7 @@ The template has a few files that enable the extension to find and set up your a
 
 ![](docs/vscode.png)
 
-When debugging your Actions Python code, you probably do not want to give the inputs every time you run and always be running the Action Server, so you can set your test inputs in a [input.json](./devdata/input.json) and just run/debug your Python code.
+When debugging your Actions Python code, you probably do not want to give the inputs every time you run and always be running the Action Server. `Robocorp Code` integration allows you to run and debug actions from within VSCode, enabling custom input to be specified as `.json` files.
 
 
 ## What does the template Action do?
