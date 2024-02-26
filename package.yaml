@@ -1,4 +1,7 @@
 
+# Required: A short name for the action package
+name: Package name
+
 # Required: A description of what's in the action package.
 description: Action package description
 
