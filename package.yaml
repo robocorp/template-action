@@ -18,6 +18,6 @@ dependencies:
   - robocorp-truststore=0.8.0
   pypi:
   - robocorp=1.6.2
-  - robocorp-actions=0.0.7
+  - robocorp-actions=0.0.9
   - pytz=2024.1
 
