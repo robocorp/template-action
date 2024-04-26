@@ -6,7 +6,7 @@ https://github.com/robocorp/robocorp/blob/master/README.md
 
 """
 
-from robocorp.actions import action
+from sema4ai.actions import action
 
 import pytz
 from datetime import datetime
