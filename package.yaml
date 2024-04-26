@@ -25,3 +25,8 @@ packaging:
     - ./.vscode/**
     - ./devdata/**
     - ./output/**
+    - ./.DS_store/**
+    - ./venv/**
+    - ./.venv/**
+    - ./**/*.pyc
+    - ./**/*.zip
