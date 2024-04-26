@@ -1,19 +1,19 @@
 # Template: Python - Actions
 
-This template gets you started in creating Actions for [Robocorp Action Server](https://github.com/robocorp/robo/tree/master/action_server/docs#readme).
+This template gets you started in creating Actions for [Sema4.ai Action Server](https://github.com/sema4ai/actions/tree/master/action_server/docs#readme).
 
 `Actions` and `Action Server` enable you to "give your AI Agents hands" meaning that your AI/LLM Agent can help your users perform distinct actions that get executed based on the LLM discussion.
 
 ## Quickstart
 
-👉 Follow the Action Server [Quickstart guide](https://github.com/robocorp/robocorp?tab=readme-ov-file#%EF%B8%8F-quickstart) in the main repository.
+👉 Follow the Action Server [Quickstart guide](https://github.com/sema4ai/actions?tab=readme-ov-file#%EF%B8%8F-quickstart) in the main repository.
 
 
 ## Dependency management
 
 Dependencies need to be added to [`package.yaml`](package.yaml).
 
-👉 [package.yaml documentation](https://github.com/robocorp/robocorp/blob/master/action_server/docs/guides/01-package-yaml.md) in the main repository.
+👉 [package.yaml documentation](https://github.com/sema4ai/actions/blob/master/action_server/docs/guides/01-package-yaml.md) in the main repository.
 
 ## Actions in VS Code 
 
@@ -32,7 +32,7 @@ The template is a simple starting point to show how to get started.
 
 The action enables you to get the timezone differences between locations.
 
-We use [pytz](https://pypi.org/project/pytz/) as an example to show that you can leverage the whole Python ecosystem. Robocorp provides a [bunch of libraries](https://pypi.org/search/?q=robocorp-); you can make your own. The sky is the limit.
+We use [pytz](https://pypi.org/project/pytz/) as an example to show that you can leverage the whole Python ecosystem. Sema4.ai provides a [bunch of libraries](https://pypi.org/search/?q=robocorp-); you can make your own. The sky is the limit.
 
 🚀 Now, go get'em
 
