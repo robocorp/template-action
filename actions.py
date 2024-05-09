@@ -1,29 +1,30 @@
-"""
-A simple AI Action template for comparing timezones
+"""A simple AI Action template for comparing timezones.
 
 Please checkout the base guidance on AI Actions in our main repository readme:
 https://github.com/sema4ai/actions/blob/master/README.md
-
 """
 
+
 from datetime import datetime
-from zoneinfo import ZoneInfo
 
 import pytz
 from sema4ai.actions import action
+from zoneinfo import ZoneInfo
 
 
 @action
 def compare_time_zones(user_timezone: str, compare_to_timezones: str) -> str:
-    """
-    Compares user timezone time difference to given timezones
+    """Compares user timezone time difference to given timezones.
 
     Args:
-        user_timezone (str): User timezone in tz database format. Example: "Europe/Helsinki"
-        compare_to_timezones (str): Comma seperated timezones in tz database format. Example: "America/New_York, Asia/Kolkata"
+        user_timezone: User timezone in tz database format.
+            Example: "Europe/Helsinki"
+        compare_to_timezones: Comma separated timezones in tz database format.
+            Example: "America/New_York, Asia/Kolkata"
 
     Returns:
-        str: List of requested timezones, their current time and the user time difference in hours
+        List of requested timezones, their current time and the user time difference in
+        hours.
     """
     output: list[str] = []
 
