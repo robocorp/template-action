@@ -1,9 +1,8 @@
 """A simple AI Action template for comparing timezones.
 
 Please checkout the base guidance on AI Actions in our main repository readme:
-https://github.com/sema4ai/actions/blob/master/README.md
+https://github.com/sema4ai/actions#readme
 """
-
 
 from datetime import datetime
 
