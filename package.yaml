@@ -6,14 +6,14 @@ name: Package name
 description: Action package description
 
 # Required: A link to where the documentation on the package lives.
-documentation: https://github.com/...
+documentation: https://github.com/<path to your markdown>/README.md
 
 dependencies:
   conda-forge:
-  - python=3.10.12
-  - uv=0.1.37
+  - python=3.10.14
+  - uv=0.1.41
   pypi:
-  - sema4ai-actions=0.3.1
+  - sema4ai-actions=0.5.0
   - pytz=2024.1
 
 packaging:
