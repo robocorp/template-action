@@ -23,8 +23,8 @@ def compare_time_zones(user_timezone: str, compare_to_timezones: str) -> str:
             Example: "America/New_York, Asia/Kolkata"
 
     Returns:
-        List of requested timezones, their current time and the user time difference in
-        hours.
+        A string with the requested timezones, their current time and the user time
+        difference in hours.
     """
     output: list[str] = []
 
@@ -32,7 +32,7 @@ def compare_time_zones(user_timezone: str, compare_to_timezones: str) -> str:
         user_tz = pytz.timezone(user_timezone)
         user_now = datetime.now(user_tz)
     except pytz.InvalidTimeError:
-        return f"Timezone '{user_timezone}' could not be found. Use tz database format."
+        return f"Timezone {user_timezone!r} could not be found. Use tz database format."
 
     output.append(
         f"- Current time in {user_timezone} is {user_now.strftime('%I:%M %p')}"
@@ -58,6 +58,6 @@ def compare_time_zones(user_timezone: str, compare_to_timezones: str) -> str:
             )
 
     # Pretty print for log
-    print("\n".join(output))
-
-    return "\n".join(output)
+    output_string = "\n".join(output)
+    print(output_string)
+    return output_string
